@@ -3,3 +3,9 @@
 >
 </app-header>
 <router-outlet></router-outlet>
+
+<div *ngIf="getNumbers$ | async as numbers">
+  <div *ngFor="let number of numbers">
+    {{number}}
+  </div>
+</div>
