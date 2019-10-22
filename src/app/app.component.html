@@ -9,3 +9,12 @@
     {{number}}
   </div>
 </div>
+
+<input type="text" name="searchMessages" #searchMessages>
+
+
+<div *ngIf="messages$ | async as messages">
+  <div *ngFor="let message of messages">
+    {{message.text}}
+  </div>
+</div>
